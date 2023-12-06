@@ -7,6 +7,7 @@
 	Creates a new switch
 	@method new
 	@within SwitchLibrary
+	@return SwitchReturnLibrary
 ]=]
 
 return {
