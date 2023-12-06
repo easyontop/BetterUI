@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[438],{63891:e=>{e.exports=JSON.parse('{"sourceUrl":"https://github.com/easyontop/BetterUI/blob/master","baseUrl":"/BetterUI/","classOrder":[],"apiCategories":[]}')}}]);

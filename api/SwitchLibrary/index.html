@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="plugin-moonwave plugin-id-moonwave">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v2.3.1">
+<title data-rh="true">SwitchLibrary | BetterUI Interface</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://easyontop.github.io/BetterUI/api/SwitchLibrary"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="SwitchLibrary | BetterUI Interface"><meta data-rh="true" name="description" content="A library stores the properties and functions of the switch
+		"><meta data-rh="true" property="og:description" content="A library stores the properties and functions of the switch
+		"><link data-rh="true" rel="canonical" href="https://easyontop.github.io/BetterUI/api/SwitchLibrary"><link data-rh="true" rel="alternate" href="https://easyontop.github.io/BetterUI/api/SwitchLibrary" hreflang="en"><link data-rh="true" rel="alternate" href="https://easyontop.github.io/BetterUI/api/SwitchLibrary" hreflang="x-default"><link rel="stylesheet" href="/BetterUI/assets/css/styles.62745723.css">
+<link rel="preload" href="/BetterUI/assets/js/runtime~main.c1e0ad95.js" as="script">
+<link rel="preload" href="/BetterUI/assets/js/main.82693407.js" as="script">
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
+<div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/BetterUI/"><b class="navbar__title text--truncate">BetterUI Interface</b></a><a class="navbar__item navbar__link" href="/BetterUI/docs/intro">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/BetterUI/api/">API</a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/BetterUI/api">API Reference</a><a class="navbar__item navbar__link" href="/BetterUI/docs/intro">Guide</a><a href="https://discord.gg/fV3vBJVHAH" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/easyontop/BetterUI" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="searchBox_ZlJk"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/BetterUI/api/AlertLibrary">​Alert​Library</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/BetterUI/api/SwitchLibrary">​Switch​Library</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">Switch</span><span style="display:inline-block">Library</span></h1><div class="luaClassTags_EipM"></div><div>
+<p>A library stores the properties and functions of the switch</p>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setParent"><code style="text-decoration:none">setParent</code><a href="#setParent" class="hash-link" aria-label="Direct link to setParent" title="Direct link to setParent">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L25"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setParent</code><code>(</code><code>t<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the parent of the switch</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setLock"><code style="text-decoration:none">setLock</code><a href="#setLock" class="hash-link" aria-label="Direct link to setLock" title="Direct link to setLock">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L87"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setLock</code><code>(</code><code>t<!-- -->: </code><code class="blue_P4bS">boolean?</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Set whether the switch should response when the user clicked</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setPosition"><code style="text-decoration:none">setPosition</code><a href="#setPosition" class="hash-link" aria-label="Direct link to setPosition" title="Direct link to setPosition">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L95"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setPosition</code><code>(</code><code>y<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/UDim2" target="_blank" rel="noopener noreferrer">UDim2<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the position of the switch</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setAnchorPoint"><code style="text-decoration:none">setAnchorPoint</code><a href="#setAnchorPoint" class="hash-link" aria-label="Direct link to setAnchorPoint" title="Direct link to setAnchorPoint">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L102"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setAnchorPoint</code><code>(</code><code>y<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector2" target="_blank" rel="noopener noreferrer">Vector2<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the AnchorPoint property of the switch</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setSize"><code style="text-decoration:none">setSize</code><a href="#setSize" class="hash-link" aria-label="Direct link to setSize" title="Direct link to setSize">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L109"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setSize</code><code>(</code><code>y<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/UDim2" target="_blank" rel="noopener noreferrer">UDim2<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the Size of the switch</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setPadding"><code style="text-decoration:none">setPadding</code><a href="#setPadding" class="hash-link" aria-label="Direct link to setPadding" title="Direct link to setPadding">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L116"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setPadding</code><code>(</code><div class="inset_uKQm"><div><code>x<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>y<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the padding of the switch button</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setBgColor"><code style="text-decoration:none">setBgColor</code><a href="#setBgColor" class="hash-link" aria-label="Direct link to setBgColor" title="Direct link to setBgColor">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L123"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setBgColor</code><code>(</code><code>x<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the background color of switch</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setCorner"><code style="text-decoration:none">setCorner</code><a href="#setCorner" class="hash-link" aria-label="Direct link to setCorner" title="Direct link to setCorner">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L130"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setCorner</code><code>(</code><code>c<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/UDim" target="_blank" rel="noopener noreferrer">UDim<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the CornerRadius property of the switch</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setButtonColor"><code style="text-decoration:none">setButtonColor</code><a href="#setButtonColor" class="hash-link" aria-label="Direct link to setButtonColor" title="Direct link to setButtonColor">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L138"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setButtonColor</code><code>(</code><code>c<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the switch toggler color</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="noTween"><code style="text-decoration:none">noTween</code><a href="#noTween" class="hash-link" aria-label="Direct link to noTween" title="Direct link to noTween">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L147"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">noTween</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Removes tween for switch toggler movement</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="tween"><code style="text-decoration:none">tween</code><a href="#tween" class="hash-link" aria-label="Direct link to tween" title="Direct link to tween">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L154"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">tween</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Adds tween for switch toggler movement</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setEnableColor"><code style="text-decoration:none">setEnableColor</code><a href="#setEnableColor" class="hash-link" aria-label="Direct link to setEnableColor" title="Direct link to setEnableColor">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L161"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setEnableColor</code><code>(</code><code>c<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the switch toggler color when enabled</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setDisableColor"><code style="text-decoration:none">setDisableColor</code><a href="#setDisableColor" class="hash-link" aria-label="Direct link to setDisableColor" title="Direct link to setDisableColor">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L171"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setDisableColor</code><code>(</code><code>c<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the switch toggler color when disabled</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setButtonCorner"><code style="text-decoration:none">setButtonCorner</code><a href="#setButtonCorner" class="hash-link" aria-label="Direct link to setButtonCorner" title="Direct link to setButtonCorner">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L181"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setButtonCorner</code><code>(</code><code>c<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/UDim" target="_blank" rel="noopener noreferrer">UDim<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the button corner (switch toggler)</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setBorder"><code style="text-decoration:none">setBorder</code><a href="#setBorder" class="hash-link" aria-label="Direct link to setBorder" title="Direct link to setBorder">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L190"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setBorder</code><code>(</code><code>c<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/UIStroke" target="_blank" rel="noopener noreferrer">UIStroke<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the main border of the switch</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setButtonSize"><code style="text-decoration:none">setButtonSize</code><a href="#setButtonSize" class="hash-link" aria-label="Direct link to setButtonSize" title="Direct link to setButtonSize">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/easyontop/BetterUI/blob/master/src/BetterUI/Library/Switch.lua#L198"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>SwitchLibrary<!-- -->:</code><code class="green_DgR4">setButtonSize</code><code>(</code><code>x<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the switch toggler size</p>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;setParent&quot;,
+            &quot;desc&quot;: &quot;Sets the parent of the switch\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;t&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Instance&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 25,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setLock&quot;,
+            &quot;desc&quot;: &quot;Set whether the switch should response when the user clicked\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;t&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;boolean?&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 87,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setPosition&quot;,
+            &quot;desc&quot;: &quot;Sets the position of the switch\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;y&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UDim2&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 95,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setAnchorPoint&quot;,
+            &quot;desc&quot;: &quot;Sets the AnchorPoint property of the switch \n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;y&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Vector2&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 102,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setSize&quot;,
+            &quot;desc&quot;: &quot;Sets the Size of the switch\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;y&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UDim2&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 109,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setPadding&quot;,
+            &quot;desc&quot;: &quot;Sets the padding of the switch button\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;x&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;y&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 116,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setBgColor&quot;,
+            &quot;desc&quot;: &quot;Sets the background color of switch\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;x&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Color3&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 123,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setCorner&quot;,
+            &quot;desc&quot;: &quot;Sets the CornerRadius property of the switch\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;c&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UDim&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 130,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setButtonColor&quot;,
+            &quot;desc&quot;: &quot;Sets the switch toggler color\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;c&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Color3&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 138,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;noTween&quot;,
+            &quot;desc&quot;: &quot;Removes tween for switch toggler movement\n\t\t&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 147,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;tween&quot;,
+            &quot;desc&quot;: &quot;Adds tween for switch toggler movement\n\t\t&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 154,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setEnableColor&quot;,
+            &quot;desc&quot;: &quot;Sets the switch toggler color when enabled\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;c&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Color3&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 161,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setDisableColor&quot;,
+            &quot;desc&quot;: &quot;Sets the switch toggler color when disabled\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;c&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Color3&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 171,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setButtonCorner&quot;,
+            &quot;desc&quot;: &quot;Sets the button corner (switch toggler)\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;c&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UDim&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 181,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setBorder&quot;,
+            &quot;desc&quot;: &quot;Sets the main border of the switch\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;c&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UIStroke&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 190,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setButtonSize&quot;,
+            &quot;desc&quot;: &quot;Sets the switch toggler size\n\t\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;x&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 198,
+                &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [],
+    &quot;types&quot;: [],
+    &quot;name&quot;: &quot;SwitchLibrary&quot;,
+    &quot;desc&quot;: &quot;A library stores the properties and functions of the switch\n\t\t&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 12,
+        &quot;path&quot;: &quot;src/BetterUI/Library/Switch.lua&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#noTween" class="table-of-contents__link toc-highlight">:noTween</a></li><li><a href="#setAnchorPoint" class="table-of-contents__link toc-highlight">:setAnchorPoint</a></li><li><a href="#setBgColor" class="table-of-contents__link toc-highlight">:setBgColor</a></li><li><a href="#setBorder" class="table-of-contents__link toc-highlight">:setBorder</a></li><li><a href="#setButtonColor" class="table-of-contents__link toc-highlight">:setButtonColor</a></li><li><a href="#setButtonCorner" class="table-of-contents__link toc-highlight">:setButtonCorner</a></li><li><a href="#setButtonSize" class="table-of-contents__link toc-highlight">:setButtonSize</a></li><li><a href="#setCorner" class="table-of-contents__link toc-highlight">:setCorner</a></li><li><a href="#setDisableColor" class="table-of-contents__link toc-highlight">:setDisableColor</a></li><li><a href="#setEnableColor" class="table-of-contents__link toc-highlight">:setEnableColor</a></li><li><a href="#setLock" class="table-of-contents__link toc-highlight">:setLock</a></li><li><a href="#setPadding" class="table-of-contents__link toc-highlight">:setPadding</a></li><li><a href="#setParent" class="table-of-contents__link toc-highlight">:setParent</a></li><li><a href="#setPosition" class="table-of-contents__link toc-highlight">:setPosition</a></li><li><a href="#setSize" class="table-of-contents__link toc-highlight">:setSize</a></li><li><a href="#tween" class="table-of-contents__link toc-highlight">:tween</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Made by easyontop._. with ❣️</div></div></div></footer></div>
+<script src="/BetterUI/assets/js/runtime~main.c1e0ad95.js"></script>
+<script src="/BetterUI/assets/js/main.82693407.js"></script>
+</body>
+</html>
