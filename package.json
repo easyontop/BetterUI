@@ -1,0 +1,14 @@
+{
+  "name": "betterui-interface",
+  "version": "1.0.0",
+  "description": "SnwJS biggest project.",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "moonwave dev --code src/BetterUI",
+    "docs:build": "moonwave build --code src/BetterUI",
+    "docs:publish": "moonwave build --code src/BetterUI --publish",
+    "publish": "moonwave build --code src/BetterUI --publish && publish.bat"
+  },
+  "author": "",
+  "license": "ISC"
+}
