@@ -4,16 +4,20 @@ sidebar_position: 3
 
 # Switch
 
-:::danger
+:::danger Important!
 You must use :setParent or the switch will <b>NOT</b> be created.
 :::
 
-<h3>Example</h3>
+:::info Special Import Usage
+As BetterUI is a server-sided module, you are required to <b>directly</b> import Switch library into the localscript.
+:::
+
+:::success Example
 
 ```lua
 -- LocalScript (Recommended)
 local player = game:GetService"Players".LocalPlayer
-local _L = require(path.to.BetterUI).Switch -- Replace with the BetterUI Interface you placed into! ReplicatedStorage is recommended.
+local _L = require(path.to.BetterUI.Library.Switch) -- Replace with the BetterUI Interface you placed into! ReplicatedStorage is recommended.
 local gs = player.PlayerGui.gameGui -- what your gui named (Gui Instance is required for it to work!!!)
 
 local g = _L.new()
@@ -29,3 +33,8 @@ g:setDisableColor(Color3.fromRGB(255, 0, 0))
 g:setButtonCorner(UDim.new(0, 2048))
 g:setButtonSize(0.5)
 ```
+
+<strong>Result</strong>:
+
+![RESULT_SWITCH](1.png)
+:::

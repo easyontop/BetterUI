@@ -4,7 +4,7 @@
 ]=]
 	--[=[
 		Creates an alert to a single player.
-		@method new
+		@function new
 		@within AlertLibrary
 		@param player Player -- Player to be sent
 		@param title string -- Title of the alert
@@ -14,7 +14,7 @@
 	]=]
 return {
 	["new"] = function(player: Player, title: string, description: string, close: string, lightTheme: boolean)
-		if not player or not player:FindFirstChildWhichIsA("PlayerGui") then return error("Alert.new(): player must be provided.") end
+		if not player then return error("Alert.new(): player must be provided.") end
 		if not title then return error("Alert.new(): title must be provided.") end
 		if not description then return error("Alert.new(): description must be provided.") end
 		close = close or "Close"

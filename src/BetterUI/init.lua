@@ -7,6 +7,7 @@ local Gui = game:GetService("StarterGui"):FindFirstChild("BetterUIInterface") or
 local lib = {
     ["Switch"] = require(script:WaitForChild"Library":WaitForChild"Switch");
 	["Alert"] = require(script:WaitForChild("Library"):WaitForChild("Alert"));
+	["Progress"] = require(script:WaitForChild"Library":WaitForChild"Progress");
 	["Gui"] = Gui;
 }
 return lib

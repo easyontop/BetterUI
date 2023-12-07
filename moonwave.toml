@@ -5,13 +5,12 @@ changelog = true
 
 classOrder = []
 
-[docsusaurus]
+[docusaurus]
 organizationName = "SnwJS Development"
 projectName = "BetterUI Interface"
 deploymentBranch = "gh-pages"
 tagline = "The advanced UI creator"
 titleDelimiter = "•"
-
 url = "https://easyontop.github.io"
 baseUrl = "/BetterUI"
 

@@ -10,5 +10,9 @@
     "publish": "moonwave build --code src/BetterUI --publish && publish.bat"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cli-progress": "^3.12.0",
+    "colors": "^1.4.0"
+  }
 }

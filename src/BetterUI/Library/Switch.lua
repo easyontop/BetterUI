@@ -5,7 +5,7 @@
 
 --[=[
 	Creates a new switch
-	@method new
+	@function new
 	@within SwitchLibrary
 	@return SwitchReturnLibrary
 ]=]
