@@ -4,10 +4,39 @@ if RunService:IsClient() then
 end
 local CreateGui = require(script:WaitForChild("CreateGui"))
 local Gui = game:GetService("StarterGui"):FindFirstChild("BetterUIInterface") or CreateGui()
+
+--[=[
+	@class BetterUI
+]=]
+--[=[
+	@prop Switch SwitchLibrary
+	@within BetterUI
+]=]
+--[=[
+	@prop Alert AlertLibrary
+	@within BetterUI
+]=]
+--[=[
+	@prop Progress ProgressLibrary
+	@within BetterUI
+]=]
+--[=[
+	@readonly
+	@prop Gui ScreenGui
+	@within BetterUI
+	:::danger
+	Overwriting this variable will directly break the module.
+	:::
+]=]
 local lib = {
     ["Switch"] = require(script:WaitForChild"Library":WaitForChild"Switch");
 	["Alert"] = require(script:WaitForChild("Library"):WaitForChild("Alert"));
 	["Progress"] = require(script:WaitForChild"Library":WaitForChild"Progress");
 	["Gui"] = Gui;
 }
-return lib
+
+if RunService:IsServer() then
+	return lib
+else
+	return lib
+end

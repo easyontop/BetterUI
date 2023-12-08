@@ -2,5 +2,5 @@ build
 desktop.ini
 publish.bat
 doc.bat
-doc.js
 node_modules/
+*.js

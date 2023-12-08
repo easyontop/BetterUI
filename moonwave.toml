@@ -1,13 +1,12 @@
-title = "BetterUI Interface"
+title = "BetterUI"
 gitRepoUrl = "https://github.com/easyontop/BetterUI"
 gitSourceBranch = "master"
 changelog = true
-
 classOrder = []
 
 [docusaurus]
 organizationName = "SnwJS Development"
-projectName = "BetterUI Interface"
+projectName = "BetterUI"
 deploymentBranch = "gh-pages"
 tagline = "The advanced UI creator"
 titleDelimiter = "•"
@@ -16,7 +15,7 @@ baseUrl = "/BetterUI"
 
 [home]
 enabled = true
-includeReadme = false
+includeReadme = true
 
 [[navbar.items]]
 href = "/api"
