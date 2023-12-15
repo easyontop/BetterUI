@@ -7,16 +7,21 @@
 	Creates a new switch
 	@function new
 	@within SwitchLibrary
+	@param options SwitchCreationOptions
 	@return SwitchReturnLibrary
 ]=]
 
-return {
-	["new"] = function()
-		local parent = nil
-		local function validation()
-			return parent ~= nil
-		end	
+--- @interface SwitchCreationOptions
+--- @within SwitchLibrary
+--- Options for creating a switch
+--- .parent Instance -- The parent the switch should be set
+--- .locked boolean -- Whether or not the toggler should be locked
+--- .toggled boolean -- Whether it should be toggled on
+--- .color {disabled: Color3,enabled: Color3} -- Color of the switch when enabled or disabled.
+--- .tweening boolean -- Whether the switch should be tweened or no.
 
+return {
+	["new"] = function(options)
 		--[=[
 			@class SwitchReturnLibrary
 			A library stores the properties and functions of the switch
@@ -35,15 +40,17 @@ return {
 		]=]
 
 		local SwitchLibrary = {
-			["Locked"] = false;
-			["Value"] = false;
+			["Locked"] = options.locked or false;
+			["Value"] = options.toggled or false;
 		}
+
+		local parent = nil
 		
-		local disc = Color3.fromRGB(0, 0, 0)
-		local enac = Color3.fromRGB(0, 0, 0)
+		local disc = (options.color and options.color.enabled) and options.color.enabled or Color3.fromRGB(0, 0, 0)
+		local enac = (options.color and options.color.disabled) and options.color.disabled or Color3.fromRGB(0, 0, 0)
 		local tweenDebounce = false
 		
-		local lessMotion = false
+		local lessMotion = not options.tweening
 		--[=[
 			@method setParent
 			@within SwitchReturnLibrary
@@ -195,6 +202,7 @@ return {
 			return SwitchLibrary.Object
 		end
 		--[=[
+			@deprecated v3 -- [BetterUI]→ This function will be removed in future major update. Use :setTweenEnabled(false) instead.
 			@method noTween
 			@within SwitchReturnLibrary
 			Removes tween for switch toggler movement
@@ -204,12 +212,24 @@ return {
 			return SwitchLibrary.Object
 		end
 		--[=[
+			@deprecated v3 -- [BetterUI]→ This function will be removed in future major update. Use :setTweenEnabled(true) instead.
 			@method tween
 			@within SwitchReturnLibrary
-			Adds tween for switch toggler movement
+			Enables tween for switch toggler movement
 		]=]
-		function SwitchLibrary:tween()
+		function SwitchLibrary:tween(x: boolean?)
 			lessMotion = false
+			return SwitchLibrary.Object
+		end
+--[=[
+			@method setTweenEnabled
+			@within SwitchReturnLibrary
+			Enables / Disables tween for switch toggler movement
+			@param x boolean -- Whether it should tween or not
+		]=]
+		function SwitchLibrary:setTweenEnabled(x: boolean?)
+			x = x or (not x)
+			lessMotion = x
 			return SwitchLibrary.Object
 		end
 		--[=[
@@ -272,6 +292,10 @@ return {
 				return error("Button Size Larger Than 0.5 in scale will make it hard to understand") 
 			end
 			SwitchLibrary.Switch.Size = UDim2.new(x, 0, 1, 0)
+		end
+
+		if options.parent then
+			SwitchLibrary:setParent(options.parent)
 		end
 		
 		return SwitchLibrary

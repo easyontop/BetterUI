@@ -7,8 +7,9 @@
       "$className": "ReplicatedStorage",
 
       "SnwDev": {
-        "$path": "./src"
+        "$path": "./src/BetterUI"
       }
     }
-  }
+  },
+  "globIgnorePaths": ["src/BetterUI", "src/BetterUI/Icon.png"]
 }

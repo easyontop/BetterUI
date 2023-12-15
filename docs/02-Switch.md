@@ -4,10 +4,6 @@ sidebar_position: 3
 
 # Switch
 
-:::danger Important!
-You must use :setParent or the switch will <b>NOT</b> be created.
-:::
-
 :::success Example
 
 ```lua
@@ -16,16 +12,22 @@ local player = game:GetService"Players".LocalPlayer
 local _L = require(path.to.BetterUI) 
 local gs = player.PlayerGui.gameGui -- what your gui named (Gui Instance is required for it to work!!!)
 
-local g = _L.new()
-g:setParent(gs) -- replace with the parent you want to set!!
+local g = _L.Switch.new({
+    parent = gs;
+    locked = false;
+    toggled = false;
+    color = {
+        disabled = Color3.fromRGB(255, 0, 0);
+        enabled = Color3.fromRGB(0, 255, 0);
+    };
+    tweening = true;
+})
 g:setPosition(UDim2.new(0.5, 0, 0.5, 0))
 g:setAnchorPoint(Vector2.new(0.5, 0.5))
 g:setSize(UDim2.new(0, 100, 0, 30)) -- Replace with scale if you want.
 g:setPadding(5, 5)
 g:setBgColor(Color3.new(0.001, 0.001, 0.001))
 g:setCorner(UDim.new(0, 2048))
-g:setEnableColor(Color3.fromRGB(0, 255, 0))
-g:setDisableColor(Color3.fromRGB(255, 0, 0))
 g:setButtonCorner(UDim.new(0, 2048))
 g:setButtonSize(0.5)
 ```

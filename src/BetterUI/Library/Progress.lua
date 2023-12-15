@@ -6,11 +6,18 @@
     @function new
     @within ProgressLibrary
     Creates a new progress bar
+    @param options ProgressCreationOptions
     @return ProgressReturnLibrary
 ]=]
 
+--- @interface ProgressCreationOptions
+--- @within ProgressLibrary
+--- The options to create a progress bar
+--- .parent Instance -- the parent to set to the progress bar
+--- .progress number -- The progress as default (Max: 100)
+
 return {
-    ["new"] = function()
+    ["new"] = function(options)
         --[=[
             @class ProgressReturnLibrary
             _L returned from [ProgressLibrary](/api/ProgressLibrary)
@@ -44,6 +51,10 @@ return {
             y.Size = UDim2.new(0, 1)
             ProgressReturnLibrary.Object = x
             return x
+        end
+
+        if options.parent then
+            ProgressReturnLibrary:setParent(options.parent)
         end
 
         --[=[
@@ -99,6 +110,10 @@ return {
             if x > 100 then return error("Failed to set progress, it can not be larger than 100") end
             ProgressReturnLibrary.Object.I_.Size = UDim2.new(x / 100, 0, 1, 0)
             return true
+        end
+
+        if options.progress then
+            ProgressReturnLibrary:setProgress(options.progress)
         end
 
         --[=[

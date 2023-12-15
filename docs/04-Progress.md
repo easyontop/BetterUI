@@ -4,10 +4,6 @@ sidebar_position: 5
 
 # Progress Bar
 
-:::info
-You must use `:setParent` before it getting into a parent
-:::
-
 :::success Example
 
 ```lua
@@ -16,8 +12,10 @@ local player = game:GetService"Players".LocalPlayer
 local _L = require(path.to.BetterUI) -- Replace with the BetterUI Interface you placed into! ReplicatedStorage is recommended.
 local gs = player.PlayerGui.gameGui -- what your gui named (Gui Instance is required for it to work!!!)
 
-local g = _L.new()
-g:setParent(gs) -- replace with the parent you want to set!!
+local g = _L.Progress.new({
+    parent = gs;
+    progress = 0;
+})
 g:setPosition(UDim2.new(0.5, 0, 0.5, 0))
 g:setAnchorPoint(Vector2.new(0.5, 0.5))
 g:setSize(UDim2.new(0, 300, 0, 10)) -- Replace with scale if you want.

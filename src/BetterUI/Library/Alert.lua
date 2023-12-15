@@ -6,14 +6,28 @@
 		Creates an alert to a single player.
 		@function new
 		@within AlertLibrary
-		@param player Player -- Player to be sent
-		@param title string -- Title of the alert
-		@param description string -- Description of the alert
-		@param close string -- The close button text<br/><code>Defualt: "Close"</code>
-		@param lightTheme boolean -- Whether it should be light theme or no <br/><code>Defualt: false</code>
+		@param options AlertCreationOptions
 	]=]
+
+--- @interface AlertCreationOptions
+--- @within AlertLibrary
+--- .player Player -- The player inside of the game
+--- .title string -- The title of the alert
+--- .description string -- The description of the alert
+--- .close string -- The close button text
+--- .theme 0 | 1 -- The theme of the alert *
+--- The options to alert a player.
+--- :::info Theme Option
+--- 0: Dark theme • 1: Light theme • default: 0
+--- :::
 return {
-	["new"] = function(player: Player, title: string, description: string, close: string, lightTheme: boolean)
+	["new"] = function(options)
+		local player = options.player
+		local title = options.title
+		local description = options.description
+		local close = options.close
+		local lightTheme = options.theme == 1
+
 		if not player then return error("Alert.new(): player must be provided.") end
 		if not title then return error("Alert.new(): title must be provided.") end
 		if not description then return error("Alert.new(): description must be provided.") end

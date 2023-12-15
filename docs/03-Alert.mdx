@@ -13,7 +13,13 @@ import TabItem from "@theme/TabItem";
 local players = game:GetService"Players"
 local playerToSend = players.TestPlayer
 local _L = require(path.to.BetterUI)
-_L.Alert:new(playerToSend, "Alert", "Example description", "Close Alert", true)
+_L.Alert.new({
+    player = playerToSend;
+    title = "Alert";
+    description = "Example description";
+    close = "Close Alert";
+    theme = 1;
+})
 ```
 
 <strong>Result</strong>:
